@@ -1,0 +1,53 @@
+.side-nav{
+    width: 10%;
+    height: 100%;
+    background-color: rgb(34, 33, 33);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    justify-content: space-around;
+    position: absolute;
+    left: 0;
+    top:0;
+   
+
+    .logo-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h3{
+            text-align: center;
+            margin-top: 2.5rem;
+            color: white;
+            font-size: 1.8rem;
+        }
+
+    }
+
+    .menu-items-container{
+        height: 90%;
+        
+       
+       
+       
+
+        ul{
+           
+            right: 1rem;
+            display: flex;
+            flex-direction: column;
+            
+
+            li{
+                color: white;
+            }
+
+        }
+    }
+   
+
+}
+

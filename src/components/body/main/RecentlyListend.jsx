@@ -1,8 +1,10 @@
 import React from 'react'
+import './RecentlyListend.scss'
+
 
 function RecentlyListend() {
   return (
-    <div>RecentlyListend</div>
+    <div className='card-con-right'>RecentlyListend</div>
   )
 }
 

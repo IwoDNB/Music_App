@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import axios from 'axios';
 import User from '../user/User';
+import './Searchbar.scss'
 
 function Searchbar() {
 
@@ -27,7 +28,10 @@ function Searchbar() {
   return (
     <div>
       
-        <button onClick={searchAlbum}>Get album</button>
+        <form className='form-searchBar' action="">
+          <input placeholder='Search for Artist, Album' type="text" />
+          <button> Search</button>
+        </form>
     </div>
   )
 }

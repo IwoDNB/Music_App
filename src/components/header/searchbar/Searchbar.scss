@@ -1,0 +1,22 @@
+.form-searchBar {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    position: absolute;
+    left: 20rem;
+
+    input{
+        width: 25rem;
+        height: 1.8rem;
+        border-radius: 10px;
+        background-color: rgba(61, 60, 60, 0.354);
+
+    }
+
+    button{
+        height: 1.7rem;
+        margin-left: 1rem;
+        
+
+    }
+}

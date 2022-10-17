@@ -1,6 +1,10 @@
 import react, {useState,useEffect} from 'react';
 import axios from 'axios';
 import './style/App.scss'
+import Navbar from './components/navbar/Navbar';
+import Header from './components/header/Header';
+import Main from './components/body/main/Main';
+import Section from './components/body/section/Section';
 
 
 function App() {
@@ -54,7 +58,12 @@ function searchAlbum(e) {
 
   return (
       <div className="App">
-          <header className="App-header">
+        <Header />
+        <Navbar />
+        <Main />
+        <Section />
+        
+          {/* <header className="App-header">
               <h1>Spotify React</h1>
               {!token ?
                   <a href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}>Login
@@ -64,7 +73,7 @@ function searchAlbum(e) {
           <form onSubmit={searchAlbum}>
                 <input type="text" onChange={e => setResult(e.target.value)}/>
           <button onClick={searchAlbum}>Get album</button>
-          </form>
+          </form> */}
       </div>
   );
 }

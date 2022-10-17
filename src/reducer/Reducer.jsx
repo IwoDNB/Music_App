@@ -1,9 +1,23 @@
-import React from 'react'
 
-function Reducer() {
-  return (
-    <div>Reducer</div>
-  )
+
+export const initialState = {
+  user: {},
+  music: [],
+  fav: [],
 }
 
-export default Reducer
+export function reducer (state, action) {
+   
+  switch (action.type) {
+    case "SEARCH_ARTIST":
+      return {...state, music: action.payload}
+
+
+      default:
+        throw new Error("The action  not defined");
+
+  }
+
+  
+}
+
