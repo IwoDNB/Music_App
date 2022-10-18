@@ -4,12 +4,17 @@ import { dataContext } from '../../../../context/Context';
 import LogoImage from "../../../../img/logo.png"
 import SectionOne from '../sectionOne/SectionOne';
 
-function SectionTwo({chosenArtist, setChosenArtist}) {
+function SectionTwo() {
 
 const {state, dispatch} = useContext(dataContext);
+const [chosenArtist, setChosenArtist] = useState();
+
 
 
   return (
+   
+   <div>
+    <SectionOne  chosenArtist={chosenArtist} setChosenArtist={setChosenArtist}/>
     <div className='section-two-con'>
 
         <div className='title-text'>Recommended Albums</div>
@@ -28,9 +33,11 @@ const {state, dispatch} = useContext(dataContext);
           ))
          }
 
+        </div> 
         </div>
-
-         
+  
+    
+    
     </div>
   )
 }

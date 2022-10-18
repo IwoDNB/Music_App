@@ -7,17 +7,17 @@ function SectionOne({chosenArtist,setChosenArtist}) {
 
 const {state, dispatch} = useContext(dataContext);
 
+console.log(chosenArtist.genres);
+
 
   return (
     <div className='section-one-con'>
         <div className='hero-display'>
               <div className='text-con'>
-           {
-            chosenArtist.artist.map(e => (
-              <span>{e.name}</span>
-            ))
-           }
-
+                  <img src={chosenArtist.images[0].url} alt="" />
+                <span>{chosenArtist.genres}</span>
+                
+  
 
           {/* <h1>Discover amazing new music and directly support artist who make it!</h1> */}
            {/* <div className='button-container'>

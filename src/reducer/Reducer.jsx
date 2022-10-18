@@ -6,6 +6,7 @@ export const initialState = {
   fav: [],
   artist: [],
   result: "",
+  display:[],
 
 }
 
@@ -18,6 +19,9 @@ export function reducer (state, action) {
 
           case "SET_ARTIST":
             return {...state, artist: action.payload}
+
+          case "DISPLAY_ARTIST":
+            return {...state, display: action.payload}
 
 
       default:

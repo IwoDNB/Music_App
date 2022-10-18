@@ -6,13 +6,14 @@ import SectionOne from './sectionOne/SectionOne'
 import SectionTwo from './sectionTwo/SectionTwo'
 
 function Main() {
-
-  const [chosenArtist, setChosenArtist]=useState()
+  
+  
+  
   return (
     <div className='main-container'>
       <Header />
-      <SectionOne />
-      <SectionTwo chosenArtist={chosenArtist} setChosenArtist={setChosenArtist} />
+      
+      <SectionTwo />
       
        {/* <div className='text-con'>
           <h1>Discover amazing new music and directly support artist who make it!</h1>
