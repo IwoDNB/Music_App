@@ -3,12 +3,14 @@ import axios from 'axios';
 import User from '../user/User';
 import './Searchbar.scss'
 import { dataContext } from '../../../context/Context';
+import { TokenContext} from '../../../context/TokenContext'
 
 function Searchbar() {
 
   const [result, setResult] = useState();
   const [searchKey, setSearchKey] = useState("");
   const {state, dispatch} = useContext(dataContext);
+  const [token, setToken] = useContext(TokenContext)
 
 
 
@@ -20,13 +22,11 @@ function Searchbar() {
            },
            params:{
              q: searchKey,
-             type: 'artist'
+             type:'artist',
            }
    })
     dispatch({type:"SET_ARTIST", payload:data.artists.items})
  }
-
-
 
 
   return (
@@ -39,11 +39,7 @@ function Searchbar() {
           </form>
          }
           </div>
-         { 
-         state.artist.map(e => (
-            <span>{e.name}</span>
-          ))
-         }
+        
 
     </div>
   )
