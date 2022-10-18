@@ -1,15 +1,15 @@
 .side-nav{
-    width: 10%;
-    height: 100%;
-    background-color: rgb(34, 33, 33);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    justify-content: space-around;
-    position: absolute;
-    left: 0;
-    top:0;
+    display: block;
+
+.side-nav-con{
+width: 217px;
+height: 100vh;
+background: rgba(22, 21, 28, 0.95);
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+    
    
 
     .logo-container{
@@ -20,9 +20,14 @@
 
         h3{
             text-align: center;
-            margin-top: 2.5rem;
+            
             color: white;
             font-size: 1.8rem;
+            position: absolute;
+            width: 204px;
+            height: 42px;
+            left: 25px;
+            top: 44px;
         }
 
     }
@@ -39,10 +44,43 @@
             right: 1rem;
             display: flex;
             flex-direction: column;
+
+            .home{
+                position: absolute;
+                width: 82px;
+                height: 17px;
+                left: 93px;
+                top: 176px;
+                font-family: 'K2D';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 21px;
+                letter-spacing: 0.2em;
+                color: #FFFFFF;
+            }
+
+            .playlists{
+                position: absolute;
+width: 100px;
+height: 17px;
+left: 93px;
+top: 238px;
+
+font-family: 'K2D';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 21px;
+letter-spacing: 0.2em;
+
+color: #FFFFFF;
+            }
             
 
             li{
                 color: white;
+                list-style: none;
             }
 
         }
@@ -50,4 +88,4 @@
    
 
 }
-
+}

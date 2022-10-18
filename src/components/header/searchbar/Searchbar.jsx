@@ -30,14 +30,15 @@ function Searchbar() {
 
 
   return (
-    <div>
-      
+    <div className='searchBar-section'>
+      <div className='searchBar-container'>
       {state.token?
           <form className='form-searchBar' onSubmit={searchArtist}>
-                <input type="text" onChange={e => setSearchKey(e.target.value)}/>
+                <input placeholder='Search for Artists, Album or track' type="text" onChange={e => setSearchKey(e.target.value)}/>
           <button type={'submit'}>Search</button>
           </form>
           : <h2>Please Login</h2>}
+          </div>
     </div>
   )
 }

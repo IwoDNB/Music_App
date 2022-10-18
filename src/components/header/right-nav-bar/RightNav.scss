@@ -1,0 +1,14 @@
+.right-nav{
+    width: 15rem;
+    
+
+    .icon-container{
+        display: flex;
+        justify-content: space-evenly;
+
+        img{
+            width: 25px;
+            height: 25px;
+        }
+    }
+}
