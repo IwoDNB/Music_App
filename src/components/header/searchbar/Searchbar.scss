@@ -21,7 +21,12 @@
         border: 1px solid #D5A419;
         background: none;
         color: white;
-        
+
+        &:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+            transition: 0.3s ease-in-out;
+        }        
 
     }
 }

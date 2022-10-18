@@ -8,15 +8,15 @@ function Searchbar() {
 
   const [result, setResult] = useState();
   const [searchKey, setSearchKey] = useState("");
-  const [artists, setArtists] = useState([]);
-  const {state, dispatch} = useContext(dataContext)
+  const {state, dispatch} = useContext(dataContext);
+
 
 
   const searchArtist = async (e)=> {
     e.preventDefault()
     const {data} = await axios.get("https://api.spotify.com/v1/search", {
            headers:{
-             Authorization:`Bearer ${state.token}`
+             Authorization:`Bearer ${localStorage.getItem("token")}`
            },
            params:{
              q: searchKey,
@@ -32,13 +32,19 @@ function Searchbar() {
   return (
     <div className='searchBar-section'>
       <div className='searchBar-container'>
-      {state.token?
+      {localStorage.getItem("token") &&
           <form className='form-searchBar' onSubmit={searchArtist}>
                 <input placeholder='Search for Artists, Album or track' type="text" onChange={e => setSearchKey(e.target.value)}/>
           <button type={'submit'}>Search</button>
           </form>
-          : <h2>Please Login</h2>}
+         }
           </div>
+         { 
+         state.artist.map(e => (
+            <span>{e.name}</span>
+          ))
+         }
+
     </div>
   )
 }
