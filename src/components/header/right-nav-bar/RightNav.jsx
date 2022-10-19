@@ -8,7 +8,7 @@ import { TokenContext } from "../../../context/TokenContext";
 function RightNav() {
   const [token, setToken] = useContext(TokenContext);
 
-  const CLIENT_ID = "bbba81dcfa2c4799bc3cc6c936e5aff0";
+  const CLIENT_ID = import.meta.env.VITE_CLIENT_ID;
   const REDIRECT_URI = "http://localhost:5173";
   const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
   const RESPONSE_TYPE = "token";
@@ -20,7 +20,7 @@ function RightNav() {
   return (
     <div className="right-nav">
       <div className="icon-container">
-        <img src={FavoriteImage} alt="one" />
+        {/* <img src={FavoriteImage} alt="one" /> */}
         {/* <img src={UserImage} alt="two" /> */}
         {/* <img src={LogOutImage} alt="three" /> */}
 

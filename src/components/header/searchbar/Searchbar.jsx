@@ -12,7 +12,7 @@ function Searchbar() {
   const {state, dispatch} = useContext(dataContext);
   const [token, setToken] = useContext(TokenContext)
 
-
+  
 
   const searchArtist = async (e)=> {
     e.preventDefault()

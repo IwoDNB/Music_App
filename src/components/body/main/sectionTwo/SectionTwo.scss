@@ -67,15 +67,22 @@
                     width: 7rem;
                     -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 10px -7px 6px 38px rgba(0,0,0,0); 
                     box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 10px -7px 6px 38px rgba(0,0,0,0);
-                    
-                }
-
-                .card-icon{
-                    width: 18px;
 
                     &:hover{
                         transform: scale(1.1);
                         transition: 0.1s ease-in-out;
+                        
+                    }
+                    
+                }
+
+                .card-icon{
+                    width: 22px;
+
+                    &:hover{
+                        transform: scale(1.1);
+                        transition: 0.1s ease-in-out;
+                        color: white;
                     }
                 }
 

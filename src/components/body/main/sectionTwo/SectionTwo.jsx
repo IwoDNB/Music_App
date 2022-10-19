@@ -4,6 +4,9 @@ import { dataContext } from '../../../../context/Context';
 import LogoImage from "../../../../img/logo.png"
 import SectionOne from '../sectionOne/SectionOne';
 import FavImage from '../../../../img/favorite.png'
+import Ganre from './Ganre';
+import StarIcon from '../../../../img/star.svg'
+
 
 function SectionTwo() {
 
@@ -19,7 +22,10 @@ const [condition, setCondition] = useState(true);
     
     <div className='section-two-con'>
 
-        <div className='title-text'><h3>Recommended Artists</h3></div>
+        <div className='title-text'><h3>Recommended Artists</h3>
+        <Ganre />
+    
+        </div>
         
         <div className='music-cards-display'>
         { state.artist && state.artist.map(e => (
@@ -37,7 +43,6 @@ const [condition, setCondition] = useState(true);
 
         </div>
   
-    
     
     </div>
   )

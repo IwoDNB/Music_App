@@ -5,6 +5,8 @@ export const initialState = {
   artist: [],
   result: "",
   display: [],
+  genre: [],
+
 };
 
 export function reducer(state, action) {
@@ -19,8 +21,13 @@ export function reducer(state, action) {
       return { ...state, display: action.payload };
 
     case "FAV_ARTIST":
-      console.log(action.payload);
       return { ...state, fav: [...state.fav, action. payload] };
+
+      case "SET_GENRE":
+      return { ...state, genre: action.payload };
+
+       case 'REGISTER':
+       return { ...state, user: action.payload };
 
     default:
       throw new Error("The action  not defined");
