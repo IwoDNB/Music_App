@@ -9,6 +9,8 @@ function SectionTwo() {
 
 const {state, dispatch} = useContext(dataContext);
 
+const [condition, setCondition] = useState(true);
+
 
 
   return (
@@ -17,18 +19,18 @@ const {state, dispatch} = useContext(dataContext);
     
     <div className='section-two-con'>
 
-        <div className='title-text'><h3>Recommended Albums</h3></div>
-        <div className='ganre-button'></div>
+        <div className='title-text'><h3>Recommended Artists</h3></div>
+        
         <div className='music-cards-display'>
         { state.artist && state.artist.map(e => (
-          <div key={e.id} onClick={() => dispatch({type:"DISPLAY_ARTIST", payload:e})} className='artist-card'>
+          <div key={e.id}  className='artist-card'>
             
             {e.images.length ?
-           <img src={e.images[0].url} alt="" /> : <img src={LogoImage} alt="" />
+           <img key={e.id} onClick={() => dispatch({type:"DISPLAY_ARTIST", payload:e})} src={e.images[0].url} alt="" /> : <img src={LogoImage} alt="" />
             }
               
               <span>{e.name}</span>
-              <img className='card-icon' src={FavImage} alt="" />
+              <img key={e.id} onClick={() => dispatch({type:"FAV_ARTIST", payload:e})} className='card-icon' src={FavImage} alt="" />
             </div>
           ))
          }
