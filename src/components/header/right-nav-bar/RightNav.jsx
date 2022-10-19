@@ -8,7 +8,7 @@ import { TokenContext } from "../../../context/TokenContext";
 function RightNav() {
   const [token, setToken] = useContext(TokenContext);
 
-  const CLIENT_ID = import.meta.env.VITE_CLIENT_ID;
+  const CLIENT_ID = import.meta.env.CLIENT_ID;
   const REDIRECT_URI = "http://localhost:5173";
   const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
   const RESPONSE_TYPE = "token";
