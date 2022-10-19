@@ -5,17 +5,23 @@
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-        border: 2px solid green;
+        
 
         .title-text{ 
             width: 100%;
             height: 5%; 
+
+            h3{
+                color: white;
+                margin-bottom: 1rem;      
+                font-size: 1.2rem;
+            }
         }
 
         .ganre-button{
             width: 100%;
             height: 10%;
-            background-color: rgba(128, 128, 128, 0.303);
+            
 
         }
 
@@ -38,19 +44,39 @@
             .artist-card {
                 width: 10rem;
                 min-width: 10rem;
-                height: 11rem;
-                border: 1px solid black;
+                height: 14rem;
                 display: flex;
-                flex-wrap: wrap;
                 flex-direction: column;
+                justify-content: center;
+                align-items: center;
                 font-size: 1.2rem;
                 border-radius: 5px;
                 background-color: rgba(22, 21, 28, 0.95);
                 color: white;
                 text-align: center;
+                justify-content: space-around;
+                padding: 0.1rem;
+
+                &:hover{
+                    background-color: rgba(22, 21, 28, 0.713);
+                    transition: 0.1s ease-in-out;
+                    cursor: pointer;
+                }
 
                 img{
-                    width: 5rem;
+                    width: 7rem;
+                    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 10px -7px 6px 38px rgba(0,0,0,0); 
+                    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 10px -7px 6px 38px rgba(0,0,0,0);
+                    
+                }
+
+                .card-icon{
+                    width: 18px;
+
+                    &:hover{
+                        transform: scale(1.1);
+                        transition: 0.1s ease-in-out;
+                    }
                 }
 
                 

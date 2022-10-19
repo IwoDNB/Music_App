@@ -1,91 +1,58 @@
-.side-nav{
-    display: block;
-
-.side-nav-con{
-width: 217px;
-height: 100vh;
-background: rgba(22, 21, 28, 0.95);
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: space-around;
+.side-nav-con {
+    width: 15rem;
+    height: 100vh;
+    background: rgba(22, 21, 28, 0.95);
+   display: block;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
     
    
 
-    .logo-container{
+    .logo-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 2.4rem;
+      left: 1.8rem;
+      position: relative;
+
+      
+
+    }
+
+    .menu-items-container {
+        margin-top: 10rem;
+        width: 80%;
+      height: 20%;
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+
+      ul {
+        height: 100%;
         width: 100%;
+        right: 1rem;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
 
-        h3{
-            text-align: center;
-            
-            color: white;
-            font-size: 1.8rem;
-            position: absolute;
-            width: 204px;
-            height: 42px;
-            left: 25px;
-            top: 44px;
-        }
-
-    }
-
-    .menu-items-container{
-        height: 90%;
-        
-       
-       
-       
-
-        ul{
-           
-            right: 1rem;
+        .icon-box{
             display: flex;
-            flex-direction: column;
-
-            .home{
-                position: absolute;
-                width: 82px;
-                height: 17px;
-                left: 93px;
-                top: 176px;
-                font-family: 'K2D';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 21px;
-                letter-spacing: 0.2em;
-                color: #FFFFFF;
-            }
-
-            .playlists{
-                position: absolute;
-width: 100px;
-height: 17px;
-left: 93px;
-top: 238px;
-
-font-family: 'K2D';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 21px;
-letter-spacing: 0.2em;
-
-color: #FFFFFF;
-            }
-            
-
-            li{
-                color: white;
-                list-style: none;
-            }
-
+            justify-content: space-between;
         }
-    }
-   
 
-}
-}
+        li {
+          color: white;
+          list-style: none;
+          letter-spacing: 0.2em;
+        }
+      }
+    }
+  }
+
