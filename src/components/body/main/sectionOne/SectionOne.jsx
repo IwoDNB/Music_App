@@ -59,7 +59,7 @@ function SectionOne() {
           </div>}
 
           {state.display.name && <div className="play-song-box">
-          {state.display.followers && <h2>PLAY ON SPOTYFI:</h2>}
+          {state.display.followers && <h2>PLAY ON SPOTIFY:</h2>}
           {state.display.external_urls && (
             <a target="_blank" href={state.display.external_urls.spotify}>PLAY</a>
           )}
