@@ -8,6 +8,7 @@ import Navbar from "./components/navbar/Navbar";
 import Header from "./components/header/Header";
 import Main from "./components/body/main/Main";
 import RecentlyListend from "./components/body/main/RecentlyListend";
+import Player from "./components/body/footer_player/Player";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
 
                 <Route path='/recentlylistend' element={<RecentlyListend />} />
             </Routes>
+      {/* <Player /> */}
 
    
     </div>

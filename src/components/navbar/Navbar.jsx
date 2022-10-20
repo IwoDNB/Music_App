@@ -13,13 +13,13 @@ function Navbar() {
     
       <div className='side-nav-con'>
       <div className='logo-container'>
-        <img src={LogoImage} alt="" />
+      <Link to="/"><img src={LogoImage} alt="" /></Link>
         </div>
         <div className='menu-items-container'>
           <ul>
-          <div className='icon-box'> <img src={HomeIcon} alt="" /> <Link className='link-nav-left' to="/"><li className='home'>HOME</li></Link> </div>
+          <div className='icon-box'> <img src={HomeIcon} alt="" /> <Link style={{ textDecoration: 'none' }} className='link-nav-left' to="/"><li>HOME</li></Link> </div>
           <div className='icon-box'> <img src={PlayListIcon} alt="" /> <li className='playlists'>PLAYLISTS</li></div>
-          <div className='icon-box'> <img src={AccountIcon} alt="" />  <li><Link Link className='link-nav-left' to="/account">ACCOUNT</Link></li></div>
+          <div className='icon-box'> <img src={AccountIcon} alt="" />  <li><Link className='link-nav-left' to="/account">ACCOUNT</Link></li></div>
           <div className='icon-box'> <img src={PaymentMethods} alt=""/> <li>PAYMENT</li></div>
           
           </ul>

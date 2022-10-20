@@ -163,6 +163,7 @@
       .play-song-box{
         display: flex;
         align-items: center;
+        
 
         h2 {
           font-size: 1.1rem;
@@ -170,9 +171,19 @@
         }
 
         a{
-          color: red;
+          color: #d5a419; ;
           text-decoration: none;
           margin-left: 1rem;
+          font-size: 1.1rem;
+          font-family: 'Roboto Condensed', sans-serif;
+          letter-spacing: 1px;
+
+          &:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+            transition: 0.1s ease-in-out;
+        }   
+
         }
 
       }

@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
 import { dataContext } from '../../../context/Context';
-import Chimp from '../../../img/chimp.png';
+import Chimp from '../../../img/chimp.jpg';
 import { AiTwotoneEdit } from 'react-icons/ai';
 import "./Account.scss"
+
+
 function Account({}) {
   const { state, dispatch } = useContext(dataContext);
   return (
@@ -10,12 +12,13 @@ function Account({}) {
         <div className='profile-box'>
       <div className='user-img'>
         <img src={Chimp} alt="" />
+        <button>Edit </button>
       </div>
     <div className='profile-details-con'>
        <table className="table">
         <thead>
           <tr className="text-muted">
-            <th scope="col">User Profile</th>
+            <th scope="col">User Account</th>
             <th scope='col'></th>
           </tr>
         </thead>
@@ -43,6 +46,7 @@ function Account({}) {
         </tbody>
       </table>
     </div>
+    <button className='go-back-btn'>Go Back</button>
     </div>
     </div>
   )

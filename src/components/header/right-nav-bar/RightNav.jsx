@@ -6,6 +6,7 @@ import ChimpImage from "../../../img/chimp.png";
 import FavoriteImage from "../../../img/favorite.png";
 import { TokenContext } from "../../../context/TokenContext";
 import {Link } from 'react-router-dom'
+import AccountImage from "../../../img/account.png"
 
 
 
@@ -27,7 +28,7 @@ function RightNav() {
       <Link to="/recentlylistend"><img src={FavoriteImage} alt="one" /></Link>
         
         {/* <img src={LogOutImage} alt="three" /> */}
-        <Link  to="/login"> <img src={UserImage} alt="two" /></Link>
+        <Link  to="/login"> <img src={AccountImage} alt="two" /></Link>
 
 
         {!token ? (
