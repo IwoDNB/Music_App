@@ -1,21 +1,19 @@
-import React, { createContext, useReducer } from 'react';
-import { reducer, initialState } from '../reducer/Reducer';
+import React, { createContext, useReducer } from "react";
+import { reducer, initialState } from "../reducer/Reducer";
 
 //create a context
 export const dataContext = createContext();
 
-
 //create context component
-function Context({children}) {
-
+function Context({ children }) {
   //create state and dispatch
-  const [state, dispatch] = useReducer(reducer, initialState)
-    
+  const [state, dispatch] = useReducer(reducer, initialState);
+
   return (
-    <dataContext.Provider value={{state, dispatch}}>
+    <dataContext.Provider value={{ state, dispatch }}>
       {children}
-      </dataContext.Provider>
-  )
+    </dataContext.Provider>
+  );
 }
 
-export default Context
+export default Context;

@@ -9,9 +9,9 @@ export const initialState = {
 export function reducer(state, action) {
   switch (action.type) {
     case "SET_ARTIST":
-      var artists = action.payload.map(artist => {
+      var artists = action.payload.map((artist) => {
         //check fav-list for each artist
-        var index = state.fav.findIndex(e => e.id === artist.id);
+        var index = state.fav.findIndex((e) => e.id === artist.id);
         artist.fav = index >= 0;
         return artist;
       });
@@ -24,7 +24,7 @@ export function reducer(state, action) {
       var artist = action.payload;
       //find current artist in fav-list
       var index = state.fav.indexOf(artist);
-      if(index >= 0) {
+      if (index >= 0) {
         //remove item
         artist.fav = false;
         state.fav.splice(index, 1);
@@ -34,13 +34,13 @@ export function reducer(state, action) {
         state.fav.push(artist);
       }
       //update artists
-      var artistIndex = state.artist.findIndex(e => e.id === artist.id);
+      var artistIndex = state.artist.findIndex((e) => e.id === artist.id);
       state.artist[artistIndex] = artist;
       //update state
       return { ...state };
 
-      case 'REGISTER':
-        return { ...state, user: action.payload }
+    case "REGISTER":
+      return { ...state, user: action.payload };
 
     default:
       throw new Error("The action  not defined");

@@ -1,19 +1,9 @@
-import React from 'react'
-import react, {useState,useEffect} from 'react';
-import axios from 'axios';
+import React from "react";
+import react, { useState, useEffect } from "react";
+import axios from "axios";
 
 function User() {
-
-    
-
-
-  return (
-    <div>
-      
-
-
-    </div>
-  )
+  return <div></div>;
 }
 
-export default User
+export default User;

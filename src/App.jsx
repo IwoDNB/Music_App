@@ -10,23 +10,18 @@ import Main from "./components/body/main/Main";
 import RecentlyListend from "./components/body/main/RecentlyListend";
 import Player from "./components/body/footer_player/Player";
 
-
 function App() {
- 
-
   return (
     <div className="App">
       <Navbar />
       <Routes>
-                <Route path='/' element={<Main />}/>
-                <Route path='/login' element={<Login />} />
-                <Route path='/account' element={<Account />} />
+        <Route path="/" element={<Main />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/account" element={<Account />} />
 
-                <Route path='/recentlylistend' element={<RecentlyListend />} />
-            </Routes>
+        <Route path="/recentlylistend" element={<RecentlyListend />} />
+      </Routes>
       {/* <Player /> */}
-
-   
     </div>
   );
 }

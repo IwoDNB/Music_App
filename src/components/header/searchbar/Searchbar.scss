@@ -1,34 +1,31 @@
 .form-searchBar {
-    
-    input{
-        width: 28rem;
-        height: 1.9rem;
-        border-radius: 5px;
-        background-color: rgba(57, 56, 56, 0.798);
-        border: none;
-        color: white;
-        padding: 0.8rem;
-        border: 1px solid #47494cd5;
-        font-size: 1rem;
+  input {
+    width: 28rem;
+    height: 1.9rem;
+    border-radius: 5px;
+    background-color: rgba(57, 56, 56, 0.798);
+    border: none;
+    color: white;
+    padding: 0.8rem;
+    border: 1px solid #47494cd5;
+    font-size: 1rem;
+  }
 
+  button {
+    width: 5rem;
+    height: 1.7rem;
+    margin-left: 1rem;
+    border-radius: 0;
+    border: 1px solid #d5a419;
+    background: none;
+    color: white;
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+      10px -7px 6px 33px rgba(0, 0, 0, 0);
 
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+      transition: 0.1s ease-in-out;
     }
-
-    button{
-        width: 5rem;
-        height: 1.7rem;
-        margin-left: 1rem;
-        border-radius: 0;
-        border: 1px solid #D5A419;
-        background: none;
-        color: white;
-        box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 10px -7px 6px 33px rgba(0,0,0,0);
-
-        &:hover{
-            cursor: pointer;
-            transform: scale(1.1);
-            transition: 0.1s ease-in-out;
-        }        
-
-    }
+  }
 }

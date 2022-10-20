@@ -5,10 +5,8 @@ import LogOutImage from "../../../img/logout.png";
 import ChimpImage from "../../../img/chimp.png";
 import FavoriteImage from "../../../img/favorite.png";
 import { TokenContext } from "../../../context/TokenContext";
-import {Link } from 'react-router-dom'
-import AccountImage from "../../../img/account.png"
-
-
+import { Link } from "react-router-dom";
+import AccountImage from "../../../img/account.png";
 
 function RightNav() {
   const [token, setToken] = useContext(TokenContext);
@@ -25,11 +23,15 @@ function RightNav() {
   return (
     <div className="right-nav">
       <div className="icon-container">
-      <Link to="/recentlylistend"><img src={FavoriteImage} alt="one" /></Link>
-        
-        {/* <img src={LogOutImage} alt="three" /> */}
-        <Link  to="/login"> <img src={AccountImage} alt="two" /></Link>
+        <Link to="/recentlylistend">
+          <img src={FavoriteImage} alt="one" />
+        </Link>
 
+        {/* <img src={LogOutImage} alt="three" /> */}
+        <Link to="/login">
+          {" "}
+          <img src={AccountImage} alt="two" />
+        </Link>
 
         {!token ? (
           <a
