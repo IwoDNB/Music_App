@@ -5,6 +5,7 @@ import HomeIcon from '../../img/homee.png'
 import PlayListIcon from '../../img/playlists.png'
 import AccountIcon from '../../img/account.png'
 import PaymentMethods from '../../img/payment.png'
+import {Link} from 'react-router-dom'
 
 
 function Navbar() {
@@ -16,9 +17,9 @@ function Navbar() {
         </div>
         <div className='menu-items-container'>
           <ul>
-          <div className='icon-box'> <img src={HomeIcon} alt="" />  <li className='home'>HOME</li></div>
+          <div className='icon-box'> <img src={HomeIcon} alt="" /> <Link className='link-nav-left' to="/"><li className='home'>HOME</li></Link> </div>
           <div className='icon-box'> <img src={PlayListIcon} alt="" /> <li className='playlists'>PLAYLISTS</li></div>
-          <div className='icon-box'> <img src={AccountIcon} alt="" />  <li>ACCOUNT</li></div>
+          <div className='icon-box'> <img src={AccountIcon} alt="" />  <li><Link Link className='link-nav-left' to="/account">ACCOUNT</Link></li></div>
           <div className='icon-box'> <img src={PaymentMethods} alt=""/> <li>PAYMENT</li></div>
           
           </ul>

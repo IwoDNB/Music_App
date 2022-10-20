@@ -45,12 +45,19 @@
         .icon-box{
             display: flex;
             justify-content: space-between;
+            
         }
 
         li {
           color: white;
           list-style: none;
           letter-spacing: 0.2em;
+          text-decoration: none;
+          
+          a{
+            
+          }
+          
         }
       }
     }

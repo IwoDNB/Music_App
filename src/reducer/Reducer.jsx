@@ -5,29 +5,42 @@ export const initialState = {
   artist: [],
   result: "",
   display: [],
-  genre: [],
-
 };
-
 export function reducer(state, action) {
   switch (action.type) {
-    case "SEARCH_ARTIST":
-      return { ...state, music: action.payload };
-
     case "SET_ARTIST":
-      return { ...state, artist: action.payload };
-
+      var artists = action.payload.map(artist => {
+        //check fav-list for each artist
+        var index = state.fav.findIndex(e => e.id === artist.id);
+        artist.fav = index >= 0;
+        return artist;
+      });
+      //update artist list
+      return { ...state, artist: artists };
     case "DISPLAY_ARTIST":
+      //update display artist
       return { ...state, display: action.payload };
-
     case "FAV_ARTIST":
-      return { ...state, fav: [...state.fav, action. payload] };
+      var artist = action.payload;
+      //find current artist in fav-list
+      var index = state.fav.indexOf(artist);
+      if(index >= 0) {
+        //remove item
+        artist.fav = false;
+        state.fav.splice(index, 1);
+      } else {
+        //add item
+        artist.fav = true;
+        state.fav.push(artist);
+      }
+      //update artists
+      var artistIndex = state.artist.findIndex(e => e.id === artist.id);
+      state.artist[artistIndex] = artist;
+      //update state
+      return { ...state };
 
-      case "SET_GENRE":
-      return { ...state, genre: action.payload };
-
-       case 'REGISTER':
-       return { ...state, user: action.payload };
+      case 'REGISTER':
+        return { ...state, user: action.payload }
 
     default:
       throw new Error("The action  not defined");

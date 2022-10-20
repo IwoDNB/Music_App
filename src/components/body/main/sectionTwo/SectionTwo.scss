@@ -79,13 +79,12 @@
                 .card-icon{
                     width: 22px;
 
-                    &:hover{
-                        transform: scale(1.1);
-                        transition: 0.1s ease-in-out;
-                        color: white;
-                    }
                 }
 
+                .yellow{
+                    color: yellow;
+                }
+               
                 
             }
         }

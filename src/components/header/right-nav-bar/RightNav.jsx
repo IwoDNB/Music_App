@@ -5,10 +5,14 @@ import LogOutImage from "../../../img/logout.png";
 import ChimpImage from "../../../img/chimp.png";
 import FavoriteImage from "../../../img/favorite.png";
 import { TokenContext } from "../../../context/TokenContext";
+import {Link } from 'react-router-dom'
+
+
+
 function RightNav() {
   const [token, setToken] = useContext(TokenContext);
 
-  const CLIENT_ID = import.meta.env.CLIENT_ID;
+  const CLIENT_ID = "bbba81dcfa2c4799bc3cc6c936e5aff0";
   const REDIRECT_URI = "http://localhost:5173";
   const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
   const RESPONSE_TYPE = "token";
@@ -20,9 +24,11 @@ function RightNav() {
   return (
     <div className="right-nav">
       <div className="icon-container">
-        {/* <img src={FavoriteImage} alt="one" /> */}
-        {/* <img src={UserImage} alt="two" /> */}
+      <Link to="/recentlylistend"><img src={FavoriteImage} alt="one" /></Link>
+        
         {/* <img src={LogOutImage} alt="three" /> */}
+        <Link  to="/login"> <img src={UserImage} alt="two" /></Link>
+
 
         {!token ? (
           <a
